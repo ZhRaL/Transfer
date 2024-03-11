@@ -1,1 +1,11 @@
 testReason
+
+Calculator nicht mehr als Singleton
+
+Single Point of Contact ist DataProvider, der die Funktionen für ALLES bereitstellt. Wer auch immer etwas wissen will fragt hier nach
+  - Level von Items
+  - MoneyLevel von MissionItems
+  - TimeReduction anhand des Levels
+  - UpgradeMethods bekommen
+  - getCost
+  - getReward
