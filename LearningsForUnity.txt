@@ -1,0 +1,29 @@
+LearningsForUnity
+
+Scriptable Objects persist in all Scenes
+    -> Way to transport Data
+    -> store "Global Values"
+
+
+Game Design Document(GDD): Für einen Selbst, Kollaborateure, Pitches etc.
+
+- Core concept
+- Design pillars
+- Main features & mechanics
+- Target platform & target audience
+- Interface & controls
+- Basic story
+- Visual style
+- Music & sound
+- Similar games & genres
+- Development timeline & major milestones
+
+Google Doc, Wiki?, maybe Github?
+
+
+
+Important for Pitches, what Publisher want from Developers:
+https://mcvuk.com/development-news/what-publishers-want-from-developers/
+
+Alles was Dialoge angeht und Frage/Antworten etc
+https://gamedevbeginner.com/dialogue-systems-in-unity/
