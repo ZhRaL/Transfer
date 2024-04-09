@@ -1,0 +1,38 @@
+[
+  {
+    "type": "data:content",
+    "ident": "a_1331",
+    "lastModified": "2024-02-05T12:32:57Z",
+    "created": "2024-01-31T20:00:53Z",
+    "uri": "",
+    "stringValue": "<div class=\"wp-block-group is-layout-constrained wp-block-group-is-layout-constrained\">\n<div class=\"wp-block-group__inner-container\">\n<div class=\"wp-block-group is-layout-constrained wp-block-group-is-layout-constrained\">\n<div class=\"wp-block-group__inner-container\">\n<h3 id=\"AktualisierungdesProfilsfürdenCommunityMirror-QuickGuideforProfileChangesViaE-Mail\" class=\"wp-block-heading\">Quick Guide for Profile Changes <strong>Via E-Mail</strong></h3>\n</div>\n</div>\n<ol>\n<li>Receiver: <a href=\"mailto:inforadiator@unibw.de\">inforadiator@unibw.de</a></li>\n<li>Subject: Change of Profile Data</li>\n<li>Content:\n<ol>\n<li>In case you want to change your profile picture, you can attach it to this email.</li>\n<li>Copy the following list and enter the desired changes:</li>\n</ol>\n</li>\n</ol>\n</div>\n</div>\n<ul>\n<li style=\"list-style-type: none;\">\n<ul>\n<li style=\"list-style-type: none;\">\n<ul>\n<li style=\"list-style-type: none;\">\n<ul>\n<li>E-Mail:</li>\n<li>Function:</li>\n<li>Room:</li>\n<li>Research areas:<br />\nSkills and competencies:</li>\n<li>Research projects:</li>\n<li>Preferred way to contact:</li>\n<li>Phone:</li>\n<li>Availability:</li>\n<li>Absence:</li>\n<li>Language skills:</li>\n<li>Websites:</li>\n<li>Social media channels:</li>\n<li>Person description:Handling my profile:</li>\n<li>Visibility: ( ) no changes ( ) only 41/400 ( ) only CASCADA ( ) own description</li>\n</ul>\n</li>\n</ul>\n</li>\n</ul>\n</li>\n</ul>\n<p>After successfully changing the data, you will receive a confirmation email.</p>\n<p><strong>Please note: Profiles without profile pictures will not be displayed on the CommunityMirrors!</strong></p>\n",
+    "name": "Update Profile Information",
+    "identifiedBy": "a_1330",
+    "metaTags": "a_1332 a_1338",
+    "metaInformations": "a_1334",
+    "images": "a_1336"
+  },
+  {
+    "type": "data:identifier",
+    "ident": "a_1330",
+    "lastModified": "2024-04-09T03:05:17.320Z",
+    "created": "2024-04-09T03:05:17.320Z",
+    "key": "wp://cms.communitymirrors.net",
+    "value": "2956"
+  },
+  {
+    "type": "data:person",
+    "ident": "a_1199",
+    "lastModified": "2023-12-05T08:44:39Z",
+    "created": "2021-12-15T00:13:12Z",
+    "uri": "",
+    "stringValue": "Kontakt: florian.alt@unibw.de<br>\nBüro: CASCADA 20, 2724<br>\nUniversitätsprofessor<br>\nForschungsgebiete: Usable Security and Privacy<br>\n<p>Florian Alt leitet die Forschungsgruppe für Usable Security and Privacy am Forschungsinstitut CODE. Er interessiert sich für das Design sicherer Systeme, die sich an die Art und Weise anpassen, wie Benutzer mit Computergeräten interagieren. Insbesondere erforscht er das Nutzerverhaltens in sicherheitskritischen Kontexten, die Entwicklung von Sicherheitsmechanismen auf Grundlage des Nutzerverhaltens (Verhaltensbiometrie), die Nutzung der Physiologie des Nutzers, um sowohl bestehende Sicherheitsmechanismen zu verbessern als auch um neue Sicherheitsmechanismen entwickeln (physiologische Sicherheit) und Bedrohungen, die von neuen allgegenwärtigen Technologien ausgehen (allgegenwärtige Sicherheit). Spezifische Anwendungsgebiete seiner Forschung sind Smart Homes, Virtuelle Realität, Social Engineering und Authentifizierung.</p>\n",
+    "name": "Florian Alt",
+    "firstname": "Florian",
+    "lastname": "Alt",
+    "identifiedBy": "a_1198",
+    "connectedBy": "a_1200 a_1201 a_1202 a_1932",
+    "metaTags": "a_6 a_26 a_10 a_1775",
+    "images": "a_1203"
+  }
+]
