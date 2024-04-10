@@ -3,7 +3,52 @@
 // simple Search and Show only the Titel of given Author
 
 // Sort by: Creation Date
+
 const main = document.getElementById("main");
+const innerMain = document.getElementById("innerMain");
+
+const parentContainer = document.querySelector('.long-text');
+EnableExpandable(parentContainer);
+
+const btnString='read-more-btn';
+const textString='read-more-text';
+const textShowString='read-more-text--show';
+
+// parentContainer.addEventListener('click', event => {
+// 
+//     const current = event.target;
+// 
+//     const isReadMoreBtn = current.className.includes('read-more-btn');
+// 
+//     if(!isReadMoreBtn) return;
+// 
+//     const currentText = event.target.parentNode.querySelector('.read-more-text');
+// 
+//     currentText.classList.toggle('read-more-text--show');
+// 
+//     current.textContent = current.textContent.includes('Read More') 
+//     ? "Read Less..." : "Read More...";
+// 
+// });
+
+function EnableExpandable(item) {
+
+    item.addEventListener('click', event => {
+
+        const current = event.target;
+        const isReadMoreBtn = current.className.includes('read-more-btn');
+        if(!isReadMoreBtn) return;
+        const currentText = current.parentNode.querySelector('.read-more-text');
+        main.append(current.className);
+        currentText.classList.toggle('read-more-text--show');
+        main.append("Hi");
+        current.textContent = current.textContent.includes('Read More') 
+        ? "Read Less..." : "Read More...";
+    
+    });
+}
+
+
 
 function httpGet(url) {
     var xmlHttp = new XMLHttpRequest();
@@ -38,5 +83,103 @@ function createTermin(item) {
     div.classList.add('item');
     main.append(div);
 }
+
+function loadOrganisation() {
+    innerMain.innerHTML="";
+    let data = getMashupData();
+    let items = data["items"];
+    for (const item of items) {
+        if (item.type == "data:organisation") {
+            createOrganisation(item);
+        }
+    }
+}
+
+function createOrganisation(item) {
+    if(item.stringValue=="") return;
+    const div = document.createElement("div");
+    div.innerHTML=item.stringValue;
+    const length = div.innerHTML.length;
+
+    // kleiner gibts nicht ;-)
+    if(length>3) {
+        const firstPart = div.innerHTML.slice(3,100);
+        const secondPart = div.innerHTML.slice(100);
+        var z = ExpandableText(firstPart,secondPart);
+        z.classList.add("item");
+        let imgID = item.images;
+        let imgURL="";
+
+
+        let data = getMashupData();
+        let items = data["items"];
+        for (const item of items) {
+
+            if (item.type == "data:image") {
+                if(item.ident==imgID){
+                    imgURL = item.fileUrl;
+                }
+            }
+        }
+        const img = document.createElement('img');
+        img.src=imgURL;
+        img.style.width='100%';
+        img.style.height='100%';
+        createCard(innerMain,img,z);
+    }
+    
+}
+
+
+function ExpandableText(first,second) {
+    const div = document.createElement("div");
+    div.append(first);
+
+    let span = document.createElement('span');
+    span.className = "read-more-text";
+    span.innerHTML += second;
+    div.append(span);
+
+    let span2 = document.createElement('span');
+    span2.classList = "read-more-btn";
+    span2.innerHTML = 'Read More...';
+    div.append(span2);
+
+    EnableExpandable(div);
+
+    return div;
+}
+
+function createCard(parent, img,descr) {
+    const outer = createDiv("col");
+    parent.append(outer);
+    const card = createDiv("card");
+    outer.append(card);
+
+    const cardbody = createDiv("card-body shadow-sm");
+    card.append(cardbody);
+
+    cardbody.append(img);
+    cardbody.append(descr);
+}
+
+function createDiv(cname) {
+    let div = document.createElement("div");
+    div.className=cname;
+    return div;
+}
+
+// <div class="col" >
+//     <div class="card">
+//         <div class="card-body shadow-sm">
+//             <img src="img/bild1.jpg" width="100%" height="100%">
+//             <div class="description">
+//                 Kurzbeschreibung
+//             </div>
+//         </div>
+//     </div>
+// </div>
+
+
 
 // Find data: https://cmnet.communitymashup.net/json/

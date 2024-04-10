@@ -1,0 +1,56 @@
+.title {
+    color: #199ea7e6;
+    font-weight: bold;
+    font-size: large;
+}
+
+.myNav {
+    background-color: #ee9134e6;
+    border-radius: 4px;
+    align-items: center;
+}
+
+.sidebar {
+    border-radius: 10px;
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: 200px; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    left: 0;
+    background-color: #acacac; /* Black */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 20px;
+}
+
+.sidebar a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 22px;
+    color: #818181;
+    display: block;
+}
+
+.main {
+    margin-left: 200px;
+    padding: 20px;
+}
+
+.item {
+    background-color: #acacac;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 5px;
+}
+
+.read-more-text{
+    display: none;
+}
+
+.read-more-text--show{
+    display: inline;
+}
+
+.read-more-btn {
+    font-weight: bold;
+    color: #0984e3;
+}
