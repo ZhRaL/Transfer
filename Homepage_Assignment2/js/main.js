@@ -5,34 +5,18 @@
 // Sort by: Creation Date
 
 const main = document.getElementById("main");
-const innerMain = document.getElementById("innerMain");
+let innerMain = document.getElementById("innerMain");
 
 const parentContainer = document.querySelector('.long-text');
 EnableExpandable(parentContainer);
+loadOrganisation();
 
 const btnString='read-more-btn';
 const textString='read-more-text';
 const textShowString='read-more-text--show';
 
-// parentContainer.addEventListener('click', event => {
-// 
-//     const current = event.target;
-// 
-//     const isReadMoreBtn = current.className.includes('read-more-btn');
-// 
-//     if(!isReadMoreBtn) return;
-// 
-//     const currentText = event.target.parentNode.querySelector('.read-more-text');
-// 
-//     currentText.classList.toggle('read-more-text--show');
-// 
-//     current.textContent = current.textContent.includes('Read More') 
-//     ? "Read Less..." : "Read More...";
-// 
-// });
-
 function EnableExpandable(item) {
-
+    if(item==null) return;
     item.addEventListener('click', event => {
 
         const current = event.target;
@@ -65,6 +49,8 @@ function getMashupData() {
  }
 
 function loadTermin() {
+    document.getElementById('aktuelles').classList.add('active');
+    document.getElementById('fakultaeten').classList.remove('active');
     main.innerHTML="";
     let data = getMashupData();
     let items = data["items"];
@@ -85,7 +71,22 @@ function createTermin(item) {
 }
 
 function loadOrganisation() {
-    innerMain.innerHTML="";
+    document.getElementById('fakultaeten').classList.add('active');
+    document.getElementById('aktuelles').classList.remove('active');
+
+    main.innerHTML="";
+    //     <div id="innerMain" class="row g-3 row-cols-3 row-cols-xs-2">
+
+    let div = document.createElement("div");
+    main.append(div);
+    div.id="innerMain";
+    div.className="row";
+    div.classList += "g-3";
+    div.classList += "row-cols-3";
+    div.classList += "row-cols-xs-2";
+
+    innerMain = div;
+
     let data = getMashupData();
     let items = data["items"];
     for (const item of items) {
@@ -102,14 +103,14 @@ function createOrganisation(item) {
     const length = div.innerHTML.length;
 
     // kleiner gibts nicht ;-)
-    if(length>3) {
+    if(length>10) {
         const firstPart = div.innerHTML.slice(3,100);
         const secondPart = div.innerHTML.slice(100);
         var z = ExpandableText(firstPart,secondPart);
         z.classList.add("item");
         let imgID = item.images;
         let imgURL="";
-
+        console.log(imgID);
 
         let data = getMashupData();
         let items = data["items"];
@@ -118,6 +119,8 @@ function createOrganisation(item) {
             if (item.type == "data:image") {
                 if(item.ident==imgID){
                     imgURL = item.fileUrl;
+                    console.log(imgURL);
+                    break;
                 }
             }
         }
@@ -142,7 +145,7 @@ function ExpandableText(first,second) {
 
     let span2 = document.createElement('span');
     span2.classList = "read-more-btn";
-    span2.innerHTML = 'Read More...';
+    span2.innerHTML = '<br>Read More...';
     div.append(span2);
 
     EnableExpandable(div);

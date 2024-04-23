@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" href="style/style.css">
 </head>
 
-<body>
+<body onload="loadOrganisation()">
     <template id="myTemplate">
         <div class="title">
                         Hier könnte ihr Titel stehen
@@ -31,90 +31,15 @@
 
 <div class="sidebar">
     <nav id="NavParent"class="nav-pills flex-column">
-        <a class="nav-link active" aria-current="page" href="#">Abschlussarbeiten</a>
-        <a class="nav-link" href="#" onclick="loadOrganisation()">Fakultäten</a>
-        <a class="nav-link" href="#" onclick="loadTermin()">Termine</a>
+        <a id="fakultaeten" class="nav-link" href="#" onclick="loadOrganisation()">Fakultäten</a>
+        <a id="aktuelles" class="nav-link" href="#" onclick="loadTermin()">Aktuelles</a>
       </nav>
 </div>
     
 
 <div class="main" id="main">
   
-    <div id="innerMain" class="row g-3 row-cols-3 row-cols-xs-2">
-
-        <div class="col" >
-            <div class="card">
-                <div class="card-body shadow-sm">
-                    <img src="img/bild1.jpg" width="100%" height="100%">
-                    <div class="title">
-                        Hier könnte ihr Titel stehen
-                    </div>
-                    <div class="description">
-                        Kurzbeschreibung der Abschlussarbeit, welche durchaus auch länger ausfallen kann und genau darüber Bescheid gibt worum es in der Arbeit gehen soll und ggf. sogar schon einige wichtige Forschungsfragen beinhaltet
-                    </div>
-                    <hr>
-                    <div class="contact">
-                          <b>Ansprechpartner </b>
-                          <a href="mailto:john.doe@unibw.de">Prof. Dr. John Doe</a>  
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col">
-            <div class="card">
-                <div class="card-body shadow-sm">
-                    <img src="img/bild1.jpg" width="100%" height="100%">
-                    <div class="title">
-                        Hier könnte ihr Titel stehen
-                    </div>
-                    <div class="description">
-                        Kurzbeschreibung der Abschlussarbeit, welche durchaus auch länger ausfallen kann und genau darüber Bescheid gibt worum es in der Arbeit gehen soll und ggf. sogar schon einige wichtige Forschungsfragen beinhaltet
-                    </div>
-                    <hr>
-                    <div class="contact">
-                          <b>Ansprechpartner </b>
-                          <a href="mailto:john.doe@unibw.de">Prof. Dr. John Doe</a>  
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card">
-                <div class="card-body shadow-sm">
-                    <img src="img/bild1.jpg" width="100%" height="100%">
-                    <div class="title">
-                        Hier könnte ihr Titel stehen
-                    </div>
-                    <div class="description">
-                        Kurzbeschreibung der Abschlussarbeit, welche durchaus auch länger ausfallen kann und genau darüber Bescheid gibt worum es in der Arbeit gehen soll und ggf. sogar schon einige wichtige Forschungsfragen beinhaltet
-                    </div>
-                    <hr>
-                    <div class="contact">
-                          <b>Ansprechpartner </b>
-                          <a href="mailto:john.doe@unibw.de">Prof. Dr. John Doe</a>  
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card">
-                <div class="card-body shadow-sm">
-                    <img src="img/bild1.jpg" width="100%" height="100%">
-                    <div class="title">
-                        Hier könnte ihr Titel stehen
-                    </div>
-                    <div class="description">
-                        Kurzbeschreibung der Abschlussarbeit, welche durchaus auch länger ausfallen kann und genau darüber Bescheid gibt worum es in der Arbeit gehen soll und ggf. sogar schon einige wichtige Forschungsfragen beinhaltet
-                    </div>
-                    <hr>
-                    <div class="contact">
-                          <b>Ansprechpartner </b>
-                          <a href="mailto:john.doe@unibw.de">Prof. Dr. John Doe</a>  
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div id="innerMain" class="row g-3 row-cols-3 row-cols-xs-2" onload="loadOrganisation()">
 
     </div>
 </div>
