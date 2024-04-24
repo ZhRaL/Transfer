@@ -80,9 +80,9 @@ function loadOrganisation() {
     let div = document.createElement("div");
     main.append(div);
     div.id="innerMain";
-    div.className="row";
-    div.classList += "g-3";
-    div.classList += "row-cols-3";
+    div.className="row ";
+    div.classList += "g-3 ";
+    div.classList += "row-cols-3 ";
     div.classList += "row-cols-xs-2";
 
     innerMain = div;
@@ -112,6 +112,7 @@ function createOrganisation(item) {
         let imgURL="";
         console.log(imgID);
 
+        // get the corresponding images, better the first one
         let data = getMashupData();
         let items = data["items"];
         for (const item of items) {
@@ -119,11 +120,12 @@ function createOrganisation(item) {
             if (item.type == "data:image") {
                 if(item.ident==imgID){
                     imgURL = item.fileUrl;
-                    console.log(imgURL);
+                    console.log("URL: "+imgURL);
                     break;
                 }
             }
         }
+
         const img = document.createElement('img');
         img.src=imgURL;
         img.style.width='100%';
@@ -162,7 +164,8 @@ function createCard(parent, img,descr) {
     const cardbody = createDiv("card-body shadow-sm");
     card.append(cardbody);
 
-    cardbody.append(img);
+    if(img.src!="")
+        cardbody.append(img);
     cardbody.append(descr);
 }
 
