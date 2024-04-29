@@ -1,0 +1,10 @@
+Suche selbst als Lupensymbol, bei Klick darauf Texfeld links davon(Titel wegkicken), bei erneutem Klick auf Lupe oder drücken Entertaste öffne sicht die Komponten SearchResult
+
+Neue Komponente "SearchResult" erstellen
+    - Diese braucht einen stringValue als searchString
+    - Hierbei oben ein Textfeld mit dem aktuellen SearchString und nochmal ein "Search-"Button für erneutes suchen
+    - GetAllItems() welche alle CM-Mashup Items holt
+    - check item.name.Contains(searchString), wenn ja Aufnahme in Liste "Results"
+    - Nachdem alle durch sind wird jeweils ein Result erstellt, bei welchem:
+        - Name drin steht (+Highlighting des SearchString)
+        - Tag, welcher Type das jeweilige Item ist(evtl das gleiche wie conntectedItems (Komponente wiederverwenden))
