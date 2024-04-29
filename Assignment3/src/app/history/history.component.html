@@ -1,0 +1,22 @@
+<div style="width:100%">
+
+  <mat-card class="app-card">
+    <mat-card-title-group>
+      <mat-card-title>Historie (zuletzt angesehen)</mat-card-title>
+    </mat-card-title-group>
+    <mat-card-content>
+
+<div *ngFor="let citem of this.getHistory()" class="itemlistdiv clearfix">
+      <table><tr><td>
+      <img *ngIf="citem.getType()=='person'" src="./assets/person.png" class="imgtype">
+      <img *ngIf="citem.getType()=='organisation'" src="./assets/organisation.png" class="imgtype">
+      <img *ngIf="citem.getType()=='content'" src="./assets/content.png" class="imgtype">
+      </td><td>
+      <div (click)="selectItem(citem.ident)" class="itemlistb">{{citem.getItemName()}}</div>
+      </td></tr></table>
+</div>
+
+    </mat-card-content>
+
+  </mat-card>
+</div>

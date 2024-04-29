@@ -1,0 +1,119 @@
+<div *ngIf="item$ | async as item; else loading">
+
+<div *ngIf="isPerson()" style="width:100%">
+  <mat-card class="app-card">
+    <mat-card-title-group>
+      <mat-card-title>{{person?.title}} {{person?.name}}</mat-card-title>
+      <img mat-card-lg-image src="{{getImageUrl()}}" style="margin-bottom: 5px;">
+    </mat-card-title-group>
+    <mat-card-content>
+      <p [innerHTML]="item.stringValue"></p>
+    </mat-card-content>
+    <mat-card-content *ngIf="item.uri">
+    <p>URL: <a href="{{item.uri}}">{{item.uri}}</a></p>
+    </mat-card-content>
+    <mat-card-content>
+    <br/>
+    <b>Verbundene Items</b>
+    <div *ngFor="let citem of item.getConnectedToItems()" class="itemlistdiv clearfix">
+      <table><tr><td>
+      <img *ngIf="citem.getType()=='person'" src="./assets/person.png" class="imgtype">
+      <img *ngIf="citem.getType()=='organisation'" src="./assets/organisation.png" class="imgtype">
+      <img *ngIf="citem.getType()=='content'" src="./assets/content.png" class="imgtype">
+      </td><td>
+      <div (click)="selectItem(citem.ident)" class="itemlistb">{{citem.getItemName()}}</div>
+      </td></tr></table>
+    </div>
+    <div *ngFor="let citem of item.getConnectedFromItems()" class="itemlistdiv clearfix">
+      <table><tr><td>
+      <img *ngIf="citem.getType()=='person'" src="./assets/person.png" class="imgtype">
+      <img *ngIf="citem.getType()=='organisation'" src="./assets/organisation.png" class="imgtype">
+      <img *ngIf="citem.getType()=='content'" src="./assets/content.png" class="imgtype">
+      </td><td>
+      <div (click)="selectItem(citem.ident)" class="itemlistb">{{citem.getItemName()}}</div>
+      </td></tr></table>
+    </div>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+<div *ngIf="isOrganisation()" style="width:100%">
+  <mat-card class="app-card">
+    <mat-card-title-group>
+      <mat-card-title>{{organisation?.name}}</mat-card-title>
+      <!-- <mat-card-subtitle>Large</mat-card-subtitle> -->
+      <img mat-card-lg-image src="assets/profile_pic.png">
+    </mat-card-title-group>
+    <mat-card-content>
+      <p [innerHTML]="item.stringValue"></p>
+    </mat-card-content>
+    <mat-card-content *ngIf="item.uri">
+      <p>URL: <a href="{{item.uri}}">{{item.uri}}</a></p>
+    </mat-card-content>
+    <mat-card-content>
+    <br/>
+    <b>Verbundene Items</b>
+    <div *ngFor="let citem of item.getConnectedToItems()" class="itemlistdiv clearfix">
+      <table><tr><td>
+      <img *ngIf="citem.getType()=='person'" src="./assets/person.png" class="imgtype">
+      <img *ngIf="citem.getType()=='organisation'" src="./assets/organisation.png" class="imgtype">
+      <img *ngIf="citem.getType()=='content'" src="./assets/content.png" class="imgtype">
+      </td><td>
+      <div (click)="selectItem(citem.ident)" class="itemlistb">{{citem.getItemName()}}</div>
+      </td></tr></table>
+    </div>
+    <div *ngFor="let citem of item.getConnectedFromItems()" class="itemlistdiv clearfix">
+      <table><tr><td>
+      <img *ngIf="citem.getType()=='person'" src="./assets/person.png" class="imgtype">
+      <img *ngIf="citem.getType()=='organisation'" src="./assets/organisation.png" class="imgtype">
+      <img *ngIf="citem.getType()=='content'" src="./assets/content.png" class="imgtype">
+      </td><td>
+      <div (click)="selectItem(citem.ident)" class="itemlistb">{{citem.getItemName()}}</div>
+      </td></tr></table>
+    </div>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+<div *ngIf="isContent()" style="width:100%">
+  <mat-card class="app-card">
+    <mat-card-title-group>
+      <mat-card-title>{{content?.name}}</mat-card-title>
+      <img mat-card-lg-image src="assets/profile_pic.png">
+    </mat-card-title-group>
+    <mat-card-content>
+      <p [innerHTML]="item.stringValue"></p>
+    </mat-card-content>
+    <mat-card-content *ngIf="item.uri">
+      <p>URL: <a href="{{item.uri}}">{{item.uri}}</a></p>
+    </mat-card-content>
+    <mat-card-content>
+    <br/>
+    <b>Verbundene Items</b>
+    <div *ngFor="let citem of item.getConnectedToItems()" class="itemlistdiv clearfix">
+      <table><tr><td>
+      <img *ngIf="citem.getType()=='person'" src="./assets/person.png" class="imgtype">
+      <img *ngIf="citem.getType()=='organisation'" src="./assets/organisation.png" class="imgtype">
+      <img *ngIf="citem.getType()=='content'" src="./assets/content.png" class="imgtype">
+      </td><td>
+      <div (click)="selectItem(citem.ident)" class="itemlistb">{{citem.getItemName()}}</div>
+      </td></tr></table>
+    </div>
+    <div *ngFor="let citem of item.getConnectedFromItems()" class="itemlistdiv clearfix">
+      <table><tr><td>
+      <img *ngIf="citem.getType()=='person'" src="./assets/person.png" class="imgtype">
+      <img *ngIf="citem.getType()=='organisation'" src="./assets/organisation.png" class="imgtype">
+      <img *ngIf="citem.getType()=='content'" src="./assets/content.png" class="imgtype">
+      </td><td>
+      <div (click)="selectItem(citem.ident)" class="itemlistb">{{citem.getItemName()}}</div>
+      </td></tr></table>
+    </div>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+</div>
+
+<ng-template #loading>
+<mat-progress-spinner mode="indeterminate"/>
+</ng-template>

@@ -1,0 +1,17 @@
+.fixed-header {
+  position: fixed;
+  z-index: 999;
+  height: 50px;
+  max-width: 600px;
+}
+
+.mat-elevation-z5 {
+  position: relative;
+}
+
+.sticky {
+  position: fixed;
+}
+.example-spacer {
+  flex: 1 1 auto;
+}

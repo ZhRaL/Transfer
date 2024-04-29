@@ -1,0 +1,44 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { 
+  margin: 0; 
+  font-family: Roboto, "Helvetica Neue", sans-serif; 
+  max-width: 600px;
+}
+
+.app-card {
+  margin: 10px;
+  padding-left: 10px;
+}
+
+.itemlistdiv {
+  margin-bottom: 4px; 
+  margin-left: 10p
+}
+
+.itemlistb {
+  border:1px solid black;
+  border-radius: 8px;
+  padding: 4px;
+  padding-left: 8px;
+  margin-top: 4px;
+  margin-left: 4px;
+  margin-right: 4px;
+  margin-bottom: 0px;
+  background: white;
+}
+.itemlistb:hover {
+  background: lightgray;
+}
+
+.imgtype {
+  height: 20px;
+  align: left;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
