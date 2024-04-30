@@ -20,8 +20,7 @@ export class SearchComponent {
   }
 
   search() {
-    // Implement your search logic here
-    console.log('Searching for:', this.searchTerm);
+
     this.router.navigate(
       ['/search/'+this.searchTerm],
     );

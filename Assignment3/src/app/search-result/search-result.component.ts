@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import { CommunityMashupService } from '../services/communitymashup/communitymashup.service';
+import { Item } from '../services/communitymashup/model/item.model';
 
 @Component({
   selector: 'app-search-result',
@@ -7,19 +9,47 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
   styleUrls: ['./search-result.component.scss']
 })
 export class SearchResultComponent {
-  searchString: string='';
 
-  constructor(private route: ActivatedRoute) { }
+  
+  searchString: string='';
+  newSearchString: string='';
+  
+  results: Array<Item> = [];
+
+  constructor(private mashupService: CommunityMashupService, private router : Router, private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.route.params.subscribe(params => {
-      this.searchString = this.route.snapshot.paramMap.get('id') as string;
+      this.searchString = this.route.snapshot.paramMap.get('searchString') as string;
       this.Init();
     });
   }
 
   private Init(){
+    this.results = [];
+    this.newSearchString=this.searchString;
+    let temp = this.mashupService.getItems();
+    for (let index = 0; index < temp.length; index++) {
+      const element = temp[index];
+      if(element.getItemName().includes(this.searchString)) {
+        this.results.push(element);
+        console.log("Found: "+element.getItemName());
+      }
 
+    }
+    console.log("Size: "+temp.length);
+  }
+
+  search() {
+    this.router.navigate(
+      ['/search/'+this.newSearchString],
+    );
+  }
+
+  selectItem(id: string){
+    this.router.navigate(
+      ['/item/'+id],
+    );
   }
   
 }

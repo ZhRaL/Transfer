@@ -1,9 +1,17 @@
-<h3>Search Results</h3>
+<h3>Search Results for: {{searchString}}</h3>
 
 <div>
-    <input>
-    <button>Search</button>
+    <input type="text" [(ngModel)]='newSearchString' (keyup.enter)="search()">
+    <button (click)="search()">Search</button>
     <div class="result">
-
+        <div *ngFor="let citem of results" class="itemlistdiv clearfix">
+            <table><tr><td>
+            <img *ngIf="citem.getType()=='person'" src="./assets/person.png" class="imgtype">
+            <img *ngIf="citem.getType()=='organisation'" src="./assets/organisation.png" class="imgtype">
+            <img *ngIf="citem.getType()=='content'" src="./assets/content.png" class="imgtype">
+            </td><td>
+            <div (click)="selectItem(citem.ident)" class="itemlistb">{{citem.getItemName()}}</div>
+            </td></tr></table>
+          </div>
     </div>
 </div>
