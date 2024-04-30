@@ -1,0 +1,11 @@
+<div style="display: flex; align-items: center;">
+
+    <!-- Input field -->
+    <input type="text" placeholder="Search..." [(ngModel)]='searchTerm' (keyup.enter)="search()" *ngIf="showSearch">
+
+    <!-- Image -->
+    <img src="./assets/search.svg" alt="Search" width="35" height="35" (click)="toggleSearch()">
+    
+
+  </div>
+  

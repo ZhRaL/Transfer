@@ -19,6 +19,8 @@ import { HistoryComponent } from './history/history.component';
 import { InfoComponent } from './info/info.component';
 import { ItemComponent } from './item/item.component';
 import { JwtInterceptor } from './jwt.interceptor';
+import { SearchComponent } from './navbar/search/search.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,8 @@ import { JwtInterceptor } from './jwt.interceptor';
     NavbarComponent,
     ItemComponent,
     InfoComponent,
-    HistoryComponent
+    HistoryComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +42,8 @@ import { JwtInterceptor } from './jwt.interceptor';
     MatDividerModule,
     MatBadgeModule,
     MatProgressSpinnerModule,
-    MatListModule
+    MatListModule,
+    FormsModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true }
