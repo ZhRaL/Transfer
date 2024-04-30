@@ -3,6 +3,7 @@
 <div>
     <input type="text" [(ngModel)]='newSearchString' (keyup.enter)="search()">
     <button (click)="search()">Search</button>
+    
     <div class="result">
         <div *ngFor="let citem of results" class="itemlistdiv clearfix">
             <table><tr><td>

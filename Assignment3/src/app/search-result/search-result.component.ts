@@ -20,12 +20,19 @@ export class SearchResultComponent {
 
   ngOnInit() {
     this.route.params.subscribe(params => {
-      this.searchString = this.route.snapshot.paramMap.get('searchString') as string;
-      this.Init();
+      this.searchString = params['searchString'];
+      if(this.mashupService.isInitialized) 
+        this.Init();
+      else {
+        this.mashupService.getInitializedEvent().subscribe(() => {
+          this.Init();
+        });
+      }
     });
   }
 
   private Init(){
+    console.log("I was called");
     this.results = [];
     this.newSearchString=this.searchString;
     let temp = this.mashupService.getItems();
@@ -37,10 +44,11 @@ export class SearchResultComponent {
       }
 
     }
-    console.log("Size: "+temp.length);
+
   }
 
   search() {
+    console.log("Size: "+this.newSearchString);
     this.router.navigate(
       ['/search/'+this.newSearchString],
     );

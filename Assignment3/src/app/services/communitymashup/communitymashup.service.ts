@@ -45,6 +45,9 @@ export class CommunityMashupService {
   public itemIdentMap = new Map();
   public itemTypeMap = new Map();
 
+  isInitialized=false;
+  private initializedSubject: Subject<void> = new Subject<void>();
+
 
   constructor(private http: HttpClient) { 
     console.log("new CommunityMashupService");
@@ -82,8 +85,14 @@ export class CommunityMashupService {
          self.lastModified = result.dataset.lastModified;
          self.initializeDataSet(result.dataset.items);
          console.log("processDataSet - finished with size "+self.items.length);
+         this.initializedSubject.next();
+         this.isInitialized=true;
          self.notifySubjects();
        });
+  }
+
+  getInitializedEvent(): Observable<void> {
+    return this.initializedSubject.asObservable();
   }
 
   toNotifyIds: Array<string> = [];
