@@ -15,3 +15,23 @@
 .example-spacer {
   flex: 1 1 auto;
 }
+
+/* Standard-Stile */
+.mat-toolbar {
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Responsives Layout für Bildschirmbreite <600px */
+@media screen and (max-width: 600px) {
+  .fixed-header{
+    height: 100px;
+  }
+  .mat-toolbar.responsive-toolbar span {
+    flex: 1 0 50%;
+    max-width: 50%;
+    box-sizing: border-box;
+    padding: 5px;
+  }
+}

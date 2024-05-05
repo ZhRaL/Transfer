@@ -1,10 +1,11 @@
-<mat-toolbar color="primary" class="fixed-header">
-  <img src="{{logoPath}}" alt="image" height="40px" (click)="home()" style="cursor: pointer;">
-  <span class="example-spacer"></span>
-  <span>CommunityMirror</span>
+<mat-toolbar color="primary" class="fixed-header responsive-toolbar" >
+
+  <img src="{{logoPath}}" alt="image" height="40px" (click)="home()" style="cursor: pointer; padding-right: 7px;">
+  <p>CommunityMirror</p>
 
   <span class="example-spacer"></span>
-  <app-search></app-search>
-  <img (click)="selectInfo()" src="./assets/info-w.png" alt="info" height="40px" style="margin: 0 20px 0 20px">
-  <img (click)="selectHistory()" src="./assets/history-w.png" alt="history" height="40px">
+    <app-search></app-search>
+    <img (click)="selectInfo()" src="./assets/info-w.png" alt="info" height="40px" style="margin: 0 20px 0 20px">
+    <img (click)="selectHistory()" src="./assets/history-w.png" alt="history" height="40px">
+
 </mat-toolbar>
