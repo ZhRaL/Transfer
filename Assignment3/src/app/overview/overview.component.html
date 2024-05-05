@@ -1,3 +1,12 @@
+<h2> Wählen Sie eine Rubrik:</h2>
+<div class="button-container">
+    <button class="button" (click)="setActiveButton(1)" [class.active]="activeButton === 1">
+        Personen
+    </button>
+  <button class="button" (click)="setActiveButton(2)" [class.active]="activeButton === 2">Organisationen</button>
+  <button class="button" (click)="setActiveButton(3)" [class.active]="activeButton === 3">Paper und Projekte</button>
+</div>
+
 <div class="result">
     <div *ngFor="let citem of results" class="itemlistdiv clearfix">
         <table><tr><td>

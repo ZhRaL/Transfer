@@ -4,8 +4,10 @@ X Suche Implementieren:
     (- erweiterte Suche, die auch in den Texten(stringValue) sucht)
 
 - Übersicht:
-  - z.B. Darstellung aller Fakultäten oder Ähnliches als neues /Home
-  - Routing bei falschen URLs etc immer zu /Home zurück
+  X- z.B. Darstellung aller Fakultäten oder Ähnliches als neues /Home
+  X- Routing bei falschen URLs etc immer zu /Home zurück
+  - 3 Buttons für Types
+  - Alphabetisch!!
 
 X Bei verlinkten Items gleich ein kleines Tag davor um welchen Typ es sich handelt(Person, Fakultät,News etc.)
   - Idee ist schon da:Checken, wieso bei item.component.html:20-22 kein Bild angezeigt wird -> Für Tags wichtig
@@ -17,10 +19,10 @@ X Bei verlinkten Items gleich ein kleines Tag davor um welchen Typ es sich hande
 
 - bei kleinen Displays Textfeld + 3 Buttons rechts in neue Zeile
 
-- Cursor bei connected Items ändern
+X- Cursor bei connected Items ändern
 
-- Textfeld zu Lupensymbol bisschen Abstand
+X - Textfeld zu Lupensymbol bisschen Abstand
 
-- Searchresult abstand zu linkem Bidlschirmrand
+X - Searchresult abstand zu linkem Bidlschirmrand
 
 - blinkender CUrsor bei SUchtext oben
