@@ -1,4 +1,4 @@
-- Suche Implementieren:
+X Suche Implementieren:
     - einfache Suche, die nur Namen sucht
     - Begriffe in dem Results die exakt dem Suchbegriff entsprechen Highlighten
     (- erweiterte Suche, die auch in den Texten(stringValue) sucht)
@@ -7,10 +7,20 @@
   - z.B. Darstellung aller Fakultäten oder Ähnliches als neues /Home
   - Routing bei falschen URLs etc immer zu /Home zurück
 
-- Bei verlinkten Items gleich ein kleines Tag davor um welchen Typ es sich handelt(Person, Fakultät,News etc.)
+X Bei verlinkten Items gleich ein kleines Tag davor um welchen Typ es sich handelt(Person, Fakultät,News etc.)
   - Idee ist schon da:Checken, wieso bei item.component.html:20-22 kein Bild angezeigt wird -> Für Tags wichtig
 
 - leere verbundene Items nicht anzeigen( vgl https://app.communitymirrors.net/item/a_220)
-    -> citem.getItemName() != "";
+    -> Bug irgendwie?! -> citem.getItemName() != "";
+
 - Kleinigkeiten, etwas mehr Schatten mit rein, vlt mit paar Kacheln mehr arbeiten, DashBoard Style
 
+- bei kleinen Displays Textfeld + 3 Buttons rechts in neue Zeile
+
+- Cursor bei connected Items ändern
+
+- Textfeld zu Lupensymbol bisschen Abstand
+
+- Searchresult abstand zu linkem Bidlschirmrand
+
+- blinkender CUrsor bei SUchtext oben

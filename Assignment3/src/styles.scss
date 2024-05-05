@@ -14,7 +14,8 @@ body {
 
 .itemlistdiv {
   margin-bottom: 4px; 
-  margin-left: 10p
+  margin-left: 10p;
+
 }
 
 .itemlistb {
@@ -27,6 +28,7 @@ body {
   margin-right: 4px;
   margin-bottom: 0px;
   background: white;
+  cursor: pointer;
 }
 .itemlistb:hover {
   background: lightgray;

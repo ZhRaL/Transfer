@@ -32,7 +32,6 @@ export class SearchResultComponent {
   }
 
   private Init(){
-    console.log("I was called");
     this.results = [];
     this.newSearchString=this.searchString;
     let temp = this.mashupService.getItems();

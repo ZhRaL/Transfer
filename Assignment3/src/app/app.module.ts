@@ -22,6 +22,7 @@ import { JwtInterceptor } from './jwt.interceptor';
 import { SearchComponent } from './navbar/search/search.component';
 import { FormsModule } from '@angular/forms';
 import { SearchResultComponent } from './search-result/search-result.component';
+import { OverviewComponent } from './overview/overview.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { SearchResultComponent } from './search-result/search-result.component';
     InfoComponent,
     HistoryComponent,
     SearchComponent,
-    SearchResultComponent
+    SearchResultComponent,
+    OverviewComponent
   ],
   imports: [
     BrowserModule,
