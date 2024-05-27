@@ -1,12 +1,20 @@
 TODO Liste:
-[ ] Passbild Lucas machen
-[ ] Reisepass Lucas beantragen
-[ ] Impftermine Lucas ausmachen
-[ ] eigene Impfungen kontrollieren/auffrischen
+[X] Passbild Lucas machen
+[X] Reisepass Lucas beantragen
+[X] Impftermine Lucas ausmachen
+[X] eigene Impfungen kontrollieren/auffrischen
+[ ] Klamotten für Lucas kaufen, dabei:
+    - GanzKörper Neopren
+    - sehr leichte lange Hosen/Shirts(Sonnenschutz)
+    %- Sonnenbrille
+    - 
+[ ] GPS Tracker Lucas
+[ ] Sonnencreme neu kaufen
 [ ] ADAC Auslandskrankenversicherung + Rückholung nach Deutschland prüfen
 [ ] Telefonnummer zum Sperren von Kreditkarte
 [ ] Tauchtauglichkeit vom HNO Arzt aktualisieren
-[ ] Mini Schnorchel /Taucherbrille für Lucas gucken
+    - Freitag 08:00 70 € p.P. Haupstraße 14, 82008 Unterhaching
+[X] Mini Schnorchel /Taucherbrille für Lucas gucken
 [ ] Schmerzmittel/Mediset, was ist erlaubt was nicht
 [X] Shark Shield
     Amazon bestellt
