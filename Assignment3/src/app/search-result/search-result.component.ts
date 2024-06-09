@@ -39,7 +39,6 @@ export class SearchResultComponent {
       const element = temp[index];
       if(element.getItemName().includes(this.searchString)) {
         this.results.push(element);
-        console.log("Found: "+element.getItemName());
       }
 
     }
@@ -47,7 +46,6 @@ export class SearchResultComponent {
   }
 
   search() {
-    console.log("Size: "+this.newSearchString);
     this.router.navigate(
       ['/search/'+this.newSearchString],
     );
